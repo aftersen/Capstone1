@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
+  m_Name: MovingA
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: b1dc68aa09ec9764fa193b6b8ecf4594,
+    type: 2}
+  udonAssembly: ".data_start\r\n\r\n    .export anim\r\n    \r\n    __Boolean_0:
+    %SystemBoolean, null\r\n    __instance_0: %VRCSDKBaseVRCPlayerApi, null\r\n   
+    onPlayerTriggerEnterPlayer: %VRCSDKBaseVRCPlayerApi, null\r\n    __instance_1:
+    %UnityEngineAnimator, null\r\n    __name_0: %SystemString, null\r\n    anim:
+    %UnityEngineAnimator, null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n    .export
+    _onPlayerTriggerEnter\r\n    \r\n    _onPlayerTriggerEnter:\r\n    \r\n       
+    PUSH, onPlayerTriggerEnterPlayer\r\n        PUSH, __instance_0\r\n        COPY\r\n       
+    PUSH, __instance_0\r\n        PUSH, __Boolean_0\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__get_isLocal__SystemBoolean\"\r\n       
+    PUSH, __Boolean_0\r\n        JUMP_IF_FALSE, 0x00000070\r\n        PUSH, anim\r\n       
+    PUSH, __instance_1\r\n        COPY\r\n        PUSH, __instance_1\r\n        PUSH,
+    __name_0\r\n        EXTERN, \"UnityEngineAnimator.__SetTrigger__SystemString__SystemVoid\"\r\n       
+    JUMP, 0x00000070\r\n        JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+  assemblyError: 
+  graphData:
+    name: 
+    description: 
+    nodes:
+    - fullName: Variable_UnityEngineAnimator
+      uid: afd52631-d3aa-46a5-8db2-81890e1516ab
+      position: {x: -903.824, y: -960.4082}
+      nodeUIDs:
+      - 
+      - 
+      - 
+      - 
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|anim
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|True
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
+    - fullName: Get_Variable
+      uid: a0e00c12-aeb6-4c7c-a608-6e11ab49f8d0
+      position: {x: 554.2067, y: 614.54474}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|afd52631-d3aa-46a5-8db2-81890e1516ab
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: UnityEngineAnimator.__SetTrigger__SystemString__SystemVoid
+      uid: 35333f01-c8c2-415f-b35a-6fca4fe70b82
+      position: {x: 759.80865, y: 428.0159}
+      nodeUIDs:
+      - a0e00c12-aeb6-4c7c-a608-6e11ab49f8d0|0
+      - 
+      flowUIDs:
+      - 
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|moving
+    - fullName: Event_OnPlayerTriggerEnter
+      uid: 79a89881-96e1-45bb-bac5-b5a5aa2a8a18
+      position: {x: 92.192505, y: 446.96753}
+      nodeUIDs: []
+      flowUIDs:
+      - 8e56e01f-e6ef-4ade-8e0f-cabfc1e34ddf
+      nodeValues: []
+    - fullName: VRCSDKBaseVRCPlayerApi.__get_isLocal__SystemBoolean
+      uid: 9dcb7d76-d5f4-4fb8-98df-3289f22aade3
+      position: {x: 333.1625, y: 592.805}
+      nodeUIDs:
+      - 79a89881-96e1-45bb-bac5-b5a5aa2a8a18|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Branch
+      uid: 8e56e01f-e6ef-4ade-8e0f-cabfc1e34ddf
+      position: {x: 549.9801, y: 445.72513}
+      nodeUIDs:
+      - 9dcb7d76-d5f4-4fb8-98df-3289f22aade3|0
+      flowUIDs:
+      - 35333f01-c8c2-415f-b35a-6fca4fe70b82
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+    updateOrder: 0
+  graphElementData:
+  - type: 5
+    uid: 6fa31c4a-bd66-4ad5-947d-5b484b36526d
+    jsonData: '{"visible":true,"layout":{"serializedVersion":"2","x":9.0,"y":126.0,"width":228.0,"height":151.0}}'
+  viewTransform:
+    position: {x: 41.6, y: -135.2}
+    scale: 0.7561437
+  version: 1.0.0
+  showAssembly: 0
