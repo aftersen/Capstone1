@@ -1,0 +1,226 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
+  m_Name: Light
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 9ffb7435d3e266b4c940f2bd4b57a8bc,
+    type: 2}
+  udonAssembly: ".data_start\r\n\r\n    .export DirectionalLight\r\n    .export Inten\r\n   
+    \r\n    __Boolean_0: %SystemBoolean, null\r\n    __Single_0: %SystemSingle, null\r\n   
+    __Single_1: %SystemSingle, null\r\n    __instance_0: %UnityEngineLight, null\r\n   
+    __instance_1: %UnityEngineLight, null\r\n    __value_0: %SystemSingle, null\r\n   
+    __Single_2: %SystemSingle, null\r\n    __instance_2: %UnityEngineLight, null\r\n   
+    __value_1: %SystemSingle, null\r\n    __Single_3: %SystemSingle, null\r\n   
+    DirectionalLight: %UnityEngineLight, null\r\n    Inten: %SystemSingle, null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n   
+    .export _interact\r\n    \r\n    _interact:\r\n    \r\n        PUSH, DirectionalLight\r\n       
+    PUSH, __instance_0\r\n        COPY\r\n        PUSH, __instance_0\r\n        PUSH,
+    __Single_0\r\n        EXTERN, \"UnityEngineLight.__get_intensity__SystemSingle\"\r\n       
+    PUSH, __Single_0\r\n        PUSH, Inten\r\n        PUSH, __Boolean_0\r\n       
+    EXTERN, \"SystemSingle.__op_GreaterThanOrEqual__SystemSingle_SystemSingle__SystemBoolean\"\r\n       
+    PUSH, __Boolean_0\r\n        JUMP_IF_FALSE, 0x000000A4\r\n        PUSH, DirectionalLight\r\n       
+    PUSH, __instance_1\r\n        COPY\r\n        PUSH, __Single_2\r\n        PUSH,
+    __value_0\r\n        COPY\r\n        PUSH, __instance_1\r\n        PUSH, __value_0\r\n       
+    EXTERN, \"UnityEngineLight.__set_intensity__SystemSingle__SystemVoid\"\r\n       
+    JUMP, 0x000000E4\r\n        PUSH, DirectionalLight\r\n        PUSH, __instance_2\r\n       
+    COPY\r\n        PUSH, __Single_3\r\n        PUSH, __value_1\r\n        COPY\r\n       
+    PUSH, __instance_2\r\n        PUSH, __value_1\r\n        EXTERN, \"UnityEngineLight.__set_intensity__SystemSingle__SystemVoid\"\r\n       
+    JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+  assemblyError: 
+  graphData:
+    name: 
+    description: 
+    nodes:
+    - fullName: Variable_UnityEngineLight
+      uid: 09b1e2d8-b110-450e-82a9-e5e6d7219bd2
+      position: {x: -934.0752, y: 113.45823}
+      nodeUIDs:
+      - 
+      - 
+      - 
+      - 
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|DirectionalLight
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|True
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
+    - fullName: Event_Interact
+      uid: 47ea0bd6-9751-4147-b27e-b4463f282e96
+      position: {x: 5.0000057, y: -99.772514}
+      nodeUIDs: []
+      flowUIDs:
+      - 36668387-49ea-4b05-887c-9486fe9b9b84
+      nodeValues: []
+    - fullName: Branch
+      uid: 36668387-49ea-4b05-887c-9486fe9b9b84
+      position: {x: 438.50098, y: -76.71178}
+      nodeUIDs:
+      - f79f47f4-f1cc-4d4d-86ca-f85723249d4d|0
+      flowUIDs:
+      - 4c577136-bdb5-47f3-beb0-db1ee74107ce
+      - 44fee7a1-4e37-42d5-a939-1ca070fd156c
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+    - fullName: Variable_SystemSingle
+      uid: 39a97be6-f9cc-4026-8411-4e3c8543b007
+      position: {x: -767.95386, y: -28.55233}
+      nodeUIDs:
+      - 
+      - 
+      - 
+      - 
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|1
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Inten
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|True
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
+    - fullName: UnityEngineLight.__get_intensity__SystemSingle
+      uid: 8092ed60-d2ec-430a-a7ce-d6ead5691b45
+      position: {x: -41.49802, y: 29.50198}
+      nodeUIDs:
+      - c196ca93-38ed-4780-8f37-1f778ea29d78|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Const_SystemSingle
+      uid: 4feb28eb-91d8-43c7-8220-51b43f7a4eb5
+      position: {x: 460.5845, y: 158.23062}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|1
+    - fullName: Const_SystemSingle
+      uid: 9229b19e-bedf-4619-9f05-11ba49ddb648
+      position: {x: 439.71, y: -186.95409}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|0
+    - fullName: Get_Variable
+      uid: 1b970ba6-8203-4b66-9a1a-870ef92d8bd5
+      position: {x: -33.677486, y: 141.9025}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|39a97be6-f9cc-4026-8411-4e3c8543b007
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: UnityEngineLight.__set_intensity__SystemSingle__SystemVoid
+      uid: 4c577136-bdb5-47f3-beb0-db1ee74107ce
+      position: {x: 661.455, y: -198.28996}
+      nodeUIDs:
+      - ed817382-41d7-4e9c-ad7e-7c114839bf28|0
+      - 9229b19e-bedf-4619-9f05-11ba49ddb648|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|0
+    - fullName: Get_Variable
+      uid: ed817382-41d7-4e9c-ad7e-7c114839bf28
+      position: {x: 387.8775, y: -282.78012}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|09b1e2d8-b110-450e-82a9-e5e6d7219bd2
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Get_Variable
+      uid: da4fef6f-9d83-4667-b641-2b7511b99026
+      position: {x: 408.27036, y: 67.10137}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|09b1e2d8-b110-450e-82a9-e5e6d7219bd2
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: UnityEngineLight.__set_intensity__SystemSingle__SystemVoid
+      uid: 44fee7a1-4e37-42d5-a939-1ca070fd156c
+      position: {x: 663.07947, y: 17.540754}
+      nodeUIDs:
+      - da4fef6f-9d83-4667-b641-2b7511b99026
+      - 4feb28eb-91d8-43c7-8220-51b43f7a4eb5|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|0
+    - fullName: SystemSingle.__op_GreaterThanOrEqual__SystemSingle_SystemSingle__SystemBoolean
+      uid: f79f47f4-f1cc-4d4d-86ca-f85723249d4d
+      position: {x: 143.87474, y: 31.186838}
+      nodeUIDs:
+      - 8092ed60-d2ec-430a-a7ce-d6ead5691b45|0
+      - 1b970ba6-8203-4b66-9a1a-870ef92d8bd5|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|0
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|0
+    - fullName: Get_Variable
+      uid: c196ca93-38ed-4780-8f37-1f778ea29d78
+      position: {x: -290.68484, y: -47.223164}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|09b1e2d8-b110-450e-82a9-e5e6d7219bd2
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    updateOrder: 0
+  graphElementData:
+  - type: 5
+    uid: fe77f156-7c31-4c36-8694-9bb248b69bfa
+    jsonData: '{"visible":true,"layout":{"serializedVersion":"2","x":16.0,"y":114.0,"width":200.0,"height":149.0}}'
+  - type: 4
+    uid: e208b2cf-bd8a-4cdc-bbd3-a933d568ed8b
+    jsonData: '{"visible":true,"layout":{"serializedVersion":"2","x":30.0,"y":0.0,"width":200.0,"height":100.0}}'
+  viewTransform:
+    position: {x: 411.2, y: 212}
+    scale: 0.57175326
+  version: 1.0.0
+  showAssembly: 0
